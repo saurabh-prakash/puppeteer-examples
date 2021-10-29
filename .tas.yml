@@ -1,11 +1,11 @@
 ---
-framework: "mocha"
+framework: "jest"
 postMerge:
   pattern:
-    - "./mocha-tests/*.js"
+    - "./jest-tests/*.js"
 preMerge:
   pattern:
-    - "./mocha-tests/*.js"
+    - "./jest-tests/*.js"
 preRun:
   - npm i
 postRun:
