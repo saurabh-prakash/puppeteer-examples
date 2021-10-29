@@ -25,10 +25,11 @@ describe('Amazon Homepage', () => {
   it('shows search results after search input', async () => {
     await page.type('#twotabsearchtextbox', 'nyan cat pullover')
     await page.click('input.nav-input')
+    setTimeout(()=>console.log("Hello"), 6000)
     await page.waitForSelector('#priceRefinements')
     const firstProduct = await page.$('a.a-link-normal.a-text-normal')
     assert.ok(firstProduct)
-  }).timeout(10000)
+  }).timeout(80000)
 })
 
 after(async () => {

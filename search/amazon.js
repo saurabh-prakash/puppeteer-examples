@@ -13,6 +13,7 @@ try {
     await page.goto('https://www.amazon.com')
     await page.type('#twotabsearchtextbox', 'nyan cat pullover')
     await page.click('input.nav-input')
+    setTimeout(()=>console.log("Hello"), 6000)
     await page.waitForSelector('#priceRefinements')
     await page.screenshot({ path: 'amazon_nyan_cat_pullovers_list.png' })
     await page.click('#pagnNextString')
