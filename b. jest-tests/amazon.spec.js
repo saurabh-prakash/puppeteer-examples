@@ -23,7 +23,7 @@ describe('Amazon Homepage', async () => {
   test('shows search results after search input', async () => {
     await page.type('#twotabsearchtextbox', 'nyan cat pullover')
     await page.click('input.nav-input')
-    await page.waitForSelector('#resultsCol')
+    await page.waitForSelector('#priceRefinements')
     const firstProduct = await page.$('a.a-link-normal.a-text-normal')
     expect(firstProduct).toBeTruthy()
   })
